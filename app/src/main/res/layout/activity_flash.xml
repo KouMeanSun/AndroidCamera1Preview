@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FlashActivity">
+    <Button
+        android:id="@+id/btn_start_camera"
+        android:layout_width="260dp"
+        android:layout_height="45dp"
+        android:background="@color/design_default_color_primary"
+        android:layout_centerHorizontal="true"
+        android:text="打开相机"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_above="@+id/tv_version"
+        android:layout_marginBottom="50dp"
+        android:textSize="18dp"/>
+
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="v1.0"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:layout_above="@+id/tv_copyright"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/tv_copyright"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="美颜相机"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"/>
+</RelativeLayout>
