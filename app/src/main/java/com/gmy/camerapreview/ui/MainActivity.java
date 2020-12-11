@@ -1,4 +1,4 @@
-package com.gmy.camerapreview;
+package com.gmy.camerapreview.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,7 @@ import android.view.SurfaceView;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.gmy.camerapreview.R;
 import com.gmy.camerapreview.camera.CameraDisplay;
 import com.gmy.camerapreview.utils.Accelerometer;
 
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_main);
         this.initView();
     }

@@ -16,16 +16,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CameraPreview">
-        <activity android:name=".FlashActivity">
+        <activity
+            android:name=".ui.CameraLandscapeActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="landscape"
+            android:theme="@style/ListTheme" />
+        <activity android:name=".ui.FlashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity
+            android:name=".ui.MainActivity"
+            android:theme="@style/ListTheme" />
     </application>
 
 </manifest>

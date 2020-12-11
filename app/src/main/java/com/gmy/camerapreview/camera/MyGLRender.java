@@ -246,7 +246,18 @@ public class MyGLRender {
         mTextureBuffer.clear();
         mTextureBuffer.put(textureCords).position(0);
     }
-
+    public void adjustLandscapeTextureBuffer(int orientation, boolean flipVertical) {
+        float[] textureCords = TextureRotationUtil.getRotationPortait(orientation, true, false);
+//        Log.e(TAG, "slam:==========rotation: " + orientation + " flipVertical: " + flipVertical
+//                + " texturePos: " + Arrays.toString(textureCords));
+        if (mTextureBuffer == null) {
+            mTextureBuffer = ByteBuffer.allocateDirect(textureCords.length * 4)
+                    .order(ByteOrder.nativeOrder())
+                    .asFloatBuffer();
+        }
+        mTextureBuffer.clear();
+        mTextureBuffer.put(textureCords).position(0);
+    }
     /**
      * 用来计算贴纸渲染的纹理最终需要的顶点坐标
      */

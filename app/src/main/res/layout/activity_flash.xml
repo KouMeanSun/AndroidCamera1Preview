@@ -4,25 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FlashActivity">
+    tools:context=".ui.FlashActivity">
     <Button
         android:id="@+id/btn_start_camera"
         android:layout_width="260dp"
         android:layout_height="45dp"
         android:background="@color/design_default_color_primary"
         android:layout_centerHorizontal="true"
-        android:text="打开相机"
+        android:text="@string/start_camera_portait"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_above="@+id/btn_start_camera_landscape"
+        android:layout_marginBottom="50dp"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/btn_start_camera_landscape"
+        android:layout_width="260dp"
+        android:layout_height="45dp"
+        android:background="@color/design_default_color_primary"
+        android:layout_centerHorizontal="true"
+        android:text="@string/start_camera_landspace"
         android:textColor="@color/white"
         android:gravity="center"
         android:layout_above="@+id/tv_version"
         android:layout_marginBottom="50dp"
-        android:textSize="18dp"/>
+        android:textSize="18sp"/>
 
     <TextView
         android:id="@+id/tv_version"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="v1.0"
+        android:text="@string/app_version"
         android:textSize="15sp"
         android:gravity="center"
         android:layout_above="@+id/tv_copyright"
@@ -32,7 +45,7 @@
         android:id="@+id/tv_copyright"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="美颜相机"
+        android:text="@string/copy_right_txt"
         android:textSize="20sp"
         android:gravity="center"
         android:layout_marginBottom="10dp"

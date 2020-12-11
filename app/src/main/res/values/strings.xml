@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">相机预览</string>
+    <string name="start_camera_portait">打开相机 竖屏</string>
+    <string name="start_camera_landspace">打开相机 横屏</string>
+    <string name="app_version">v1.0</string>
+    <string name="copy_right_txt">美颜相机</string>
 </resources>

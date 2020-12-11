@@ -1,4 +1,4 @@
-package com.gmy.camerapreview;
+package com.gmy.camerapreview.ui;
 
 
 import android.Manifest;
@@ -14,10 +14,12 @@ import android.widget.Button;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.gmy.camerapreview.R;
+
 public class FlashActivity extends Activity {
     private final String TAG = "FlashActivity";
     private static final int REQUEST_PERMISSION = 233;
-    private Button mStartBtn;
+    private Button mStartBtn,mStartLandspaceBtn;
 
 
     @Override
@@ -43,6 +45,14 @@ public class FlashActivity extends Activity {
                 Intent intent = new Intent(FlashActivity.this,MainActivity.class);
                 startActivity(intent);
 
+            }
+        });
+        this.mStartLandspaceBtn = this.findViewById(R.id.btn_start_camera_landscape);
+        this.mStartLandspaceBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FlashActivity.this, CameraLandscapeActivity.class);
+                startActivity(intent);
             }
         });
 
